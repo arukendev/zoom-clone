@@ -10,10 +10,16 @@ html(lang="en")
         header  
             h1 Zoom
         main
-            div#mystream
-                video#myFace(autoplay, palysinline, width="400", heigh="400")
-                button#mute Mute
-                button#camera Camera Off
-                select#cameras
+            div#welcome
+                form
+                    input(placeholder="room name", type="text", required)
+                    button Enter room
+            div#call
+                div#mystream
+                    video#myFace(autoplay, palysinline, width="400", heigh="400")
+                    button#mute Mute
+                    button#camera Camera Off
+                    select#cameras
+                video#peerFace(autoplay, palysinline, width="400", heigh="400")
         script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")
